@@ -1,4 +1,6 @@
-
+docker-compose.yml
+Dockerfile
+nginx.conf
 ###> symfony/framework-bundle ###
 /.env.local
 /.env.local.php

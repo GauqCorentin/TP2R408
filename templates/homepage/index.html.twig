@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomepageController!{% endblock %}
+
+{% block body %}
+    <h1>My Blog</h1>
+    <div>
+        {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button type="submit">
+            Post
+        </button>
+        {{ form_end(form) }}
+    </div>
+    {% for post in posts %}
+        <article class="row">
+            <h1>
+                {{ post.title }}
+            </h1>
+            <section>
+                {{ post.content }}
+            </section>
+            <small>{{ post.postedAt|date() }}</small>
+            <hr/>
+        </article>
+    {% endfor %}
+{% endblock %}
